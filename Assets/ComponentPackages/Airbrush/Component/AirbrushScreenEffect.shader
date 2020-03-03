@@ -1,4 +1,4 @@
-﻿Shader "Custom/AirbrushScreenEffect"
+﻿Shader "Airbrush/Screen Effect"
 {
     Properties
     {

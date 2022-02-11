@@ -48,8 +48,8 @@
             fixed4 frag (v2f i) : SV_Target
             {
                 fixed4 col = tex2D(_MainTex, i.uv);
-                fixed4 random = tex2D (_Noise, i.uv * _ScreenScale.xy);
-                col = col + (random - 0.5) * _Blend;
+                fixed4 random = tex2D (_Noise, i.uv * _ScreenScale.xy + _Time.zw * 13.0f);
+                col = saturate(col - random * _Blend);
                 return col;
             }
             ENDCG
